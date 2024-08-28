@@ -78,7 +78,7 @@ export default class VertinhoClient {
       onWebSocketLoginSuccess: () => {},
       onWebSocketLoginError: error =>
         printError('Error reported by WebSocket login', error),
-      onPeerStreaming: () => {},
+      onPeerStreaming: (stream) => this.callbacks.onStreamReady(stream),
       onPeerStreamingError: () => {},
       ...this.params,
       ...this.callbacks,

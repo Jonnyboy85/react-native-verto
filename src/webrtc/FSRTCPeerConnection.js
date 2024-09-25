@@ -86,7 +86,12 @@ export default class FSRTCPeerConnection {
         onRemoteStream(remoteMediaStream);
       }
     };
-    peer.addStream(attachStream);
+    //peer.addStream(attachStream);
+
+    attachStream.getTracks().forEach(track => {
+      console.log('Peer add track ',track);
+      peer.addTrack(track, attachStream);
+    });
 
     if (onOfferSDP) {
       peer

@@ -26,11 +26,7 @@
   "license": "MIT",
   "licenseFilename": "LICENSE",
   "readmeFilename": "README.md",
-  "peerDependencies": {
-    "react-native-webrtc": "^106.0.7"
-  },
   "devDependencies": {
-    "react-native-webrtc": "^106.0.7",
     "react-native-background-timer": "^2.1.1"
   }
 }

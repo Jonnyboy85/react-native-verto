@@ -27,10 +27,10 @@
   "licenseFilename": "LICENSE",
   "readmeFilename": "README.md",
   "peerDependencies": {
-    "react-native-webrtc": "^124.0.4"
+    "react-native-webrtc": "^106.0.0"
   },
   "devDependencies": {
-    "react-native-webrtc": "^124.0.4",
+    "react-native-webrtc": "^106.0.0",
     "react-native-background-timer": "^2.1.1"
   }
 }

@@ -79,15 +79,21 @@ export default class FSRTCPeerConnection {
       }
     };
 
-    peer.onaddstream = event => {
+    /* peer.onaddstream = event => {
       const remoteMediaStream = event.stream;
+      if (onRemoteStream) {
+        onRemoteStream(remoteMediaStream);
+      }
+    }; 
+    peer.addStream(attachStream);*/
 
+    peer.ontrack  = event => {
+      const remoteMediaStream = event.stream;
       if (onRemoteStream) {
         onRemoteStream(remoteMediaStream);
       }
     };
-    //peer.addStream(attachStream);
-
+    
     attachStream.getTracks().forEach(track => {
       console.log('Peer add track ',track);
       peer.addTrack(track, attachStream);

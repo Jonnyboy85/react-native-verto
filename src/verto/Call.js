@@ -12,7 +12,7 @@ import {generateGUID, ENUM} from './utils';
 import {Clipboard} from 'react-native';
 import BackgroundTimer from 'react-native-background-timer';
 
-BackgroundTimer.start();
+//BackgroundTimer.start();
 
 export default class Call {
   constructor(direction, verto, params, mediaHandlers = {}) {

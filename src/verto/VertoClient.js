@@ -141,7 +141,7 @@ export default class VertinhoClient {
     this.webSocket.onopen = () => {
       if (this.retryingTimer) {
         printWarning('Successfully WebSocket attempt to reconnect.');
-        clearTimeout(this.retryingTimer);
+        BackgroundTimer.clearTimeout(this.retryingTimer);
       }
 
       this.publish('login', {});
@@ -551,7 +551,7 @@ export default class VertinhoClient {
 
   destroy() {
     if (this.retryingTimer)
-      clearTimeout(this.retryingTimer);
+      BackgroundTimer.clearTimeout(this.retryingTimer);
     if (this.socketReady()) {
       this.webSocket.close();
       this.purge();

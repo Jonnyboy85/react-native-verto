@@ -14,7 +14,7 @@ import {generateGUID, ENUM} from './utils';
 import {Params, defaultVertoCallbacks, eventType} from '../store';
 import BackgroundTimer from 'react-native-background-timer';
 
-BackgroundTimer.start();
+//BackgroundTimer.start();
 let sessionIDCache;
 
 export default class VertinhoClient {

@@ -88,7 +88,8 @@ export default class FSRTCPeerConnection {
     peer.addStream(attachStream);*/
 
     peer.ontrack  = event => {
-      const remoteMediaStream = event.stream;
+      //const remoteMediaStream = event.stream;
+      const remoteMediaStream = event.streams[0]; 
       if (onRemoteStream) {
         onRemoteStream(remoteMediaStream);
       }
